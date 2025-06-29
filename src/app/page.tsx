@@ -1,13 +1,13 @@
 "use client"
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
-
-// Add a custom class for the liquid glass button
-const glassButtonClass =
-  "relative text-white px-6 py-2 rounded-2xl bg-transparent backdrop-blur-[2px] saturate-[1.8] shadow-[0_8px_32px_rgba(31,38,135,0.2),_inset_0_4px_20px_rgba(255,255,255,0.3)] transition-all duration-300 ease-in-out overflow-hidden btn-liquid-glass";
 
 export default function Home() {
   const [theme, setTheme] = useState("night");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -38,6 +38,8 @@ export default function Home() {
     `relative px-6 py-2 rounded-2xl ${glassBg} ${glassText} ${glassShadow} backdrop-blur-[2px] saturate-[1.8] transition-all duration-300 ease-in-out overflow-hidden btn-liquid-glass`;
 
   const linkColor = isNight ? "text-purple-400" : "text-sky-600";
+
+  if (!mounted) return null;
 
   return (
     <div
@@ -97,7 +99,7 @@ export default function Home() {
       <div className="relative z-10 flex items-center justify-center min-h-[40vh] p-8 sm:p-20">
         <main className="max-w-2xl w-full mx-auto flex flex-col justify-center min-h-[300px]">
           <div className={`${textColor} text-sm sm:text-base leading-relaxed font-mono text-left w-full`}>
-            hi, this is vineet and i <a href="#" className={`underline ${linkColor}`}>design</a> / <a href="#" className={`underline ${linkColor}`}>develop websites</a>, i'm currently focused on artificial intelligence and machine learning. i barely <a href="twitter.com/vineetcres" target="_blank" className={`underline ${linkColor}`}>tweet</a> but it's there if you're curious, you can also check out <a href="#" className={`underline ${linkColor}`}>my playlist</a>. and yes, my (occasionally unbearable) <a href="#" className={`underline ${linkColor}`}>blogs</a> and of course, <a href="#" className={`underline ${linkColor}`}>my resume</a>.<br></br> connect with me on <a href="https://linkedin.com/in/vineetcres" target="_blank" className={`underline ${linkColor}`}>linkedin</a>, <a href="https://twitter.com/vineetcres" target="_blank" className={`underline ${linkColor}`}>twitter</a>, or drop me an <a href="mailto:vineetcres@gmail.com" target="_blank" rel="noopener noreferrer" className={`underline ${linkColor}`}>email</a>
+            hi, this is vineet and i <a href="#" className={`underline ${linkColor}`}>design</a> / <a href="#" className={`underline ${linkColor}`}>develop websites</a>, i&apos;m currently focused on artificial intelligence and machine learning. i barely <a href="twitter.com/vineetcres" target="_blank" className={`underline ${linkColor}`}>tweet</a> but it&apos;s there if you&apos;re curious, you can also check out <a href="#" className={`underline ${linkColor}`}>my playlist</a>. and yes, my (occasionally unbearable) <a href="#" className={`underline ${linkColor}`}>blogs</a> and of course, <a href="#" className={`underline ${linkColor}`}>my resume</a>.<br></br> connect with me on <a href="https://linkedin.com/in/vineetcres" target="_blank" className={`underline ${linkColor}`}>linkedin</a>, <a href="https://twitter.com/vineetcres" target="_blank" className={`underline ${linkColor}`}>twitter</a>, or drop me an <a href="mailto:vineetcres@gmail.com" target="_blank" rel="noopener noreferrer" className={`underline ${linkColor}`}>email</a>
           </div>
           <div className="mt-8 flex items-center gap-4">
             <button className={themedGlassButton + " h-12 px-6 flex items-center justify-center"}>
