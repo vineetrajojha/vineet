@@ -96,7 +96,7 @@ export default function Home() {
               : `radial-gradient(circle 350px at 50% 80px, rgba(139,92,246,0.13), transparent)`,
         }}
       />
-      <div className="relative z-10 flex items-center justify-center min-h-[40vh] p-8 sm:p-20 -mt-5 sm:mt-0">
+      <div className="relative z-10 flex items-center justify-center p-4 sm:p-20 sm:min-h-[40vh] -mt-5 sm:mt-0">
         <main className="max-w-2xl w-full mx-auto flex flex-col justify-center min-h-[300px]">
           <div className={`${textColor} text-sm sm:text-base leading-relaxed font-mono text-left w-full`}>
             hi, this is vineet and i <a href="#" className={`underline ${linkColor}`}>design</a> / <a href="#" className={`underline ${linkColor}`}>develop websites</a>, & currently focusing on artificial intelligence and machine learning. i barely <a href="twitter.com/vineetcres" target="_blank" className={`underline ${linkColor}`}>tweet</a> but it&apos;s there if you&apos;re curious, you can also check out <a href="#" className={`underline ${linkColor}`}>my playlist</a>, <a href="#" className={`underline ${linkColor}`}>blogs</a> & <a href="#" className={`underline ${linkColor}`}>my resume</a>. connect with me on <a href="https://linkedin.com/in/vineetcres" target="_blank" className={`underline ${linkColor}`}>linkedin</a>, <a href="https://twitter.com/vineetcres" target="_blank" className={`underline ${linkColor}`}>twitter</a>, or drop me an <a href="mailto:vineetcres@gmail.com" target="_blank" rel="noopener noreferrer" className={`underline ${linkColor}`}>email</a> : /
