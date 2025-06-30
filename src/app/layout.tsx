@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "dalemalama",
+  title: "portfolio.exe",
   description: "author: vineet raj",
 };
 
